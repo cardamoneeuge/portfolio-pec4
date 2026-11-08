@@ -74,22 +74,22 @@ La navegación permite acceder a las distintas páginas y regresar a la sección
 
 ## Diseño
 
-He utilizado la tipografía Inter y una paleta de negro, blanco y gris, siguiendo el diseño de mi PEC 3.
+Se utilizó tipografía Inter y una paleta de negro, blanco y gris, siguiendo el diseño de mi PEC 3.
 
 Para organizar los estilos he utilizado Sass, separando las variables y los componentes reutilizables de los estilos generales.
 
-También he añadido reglas responsive para adaptar la distribución a escritorio, tablet y móvil.
+También añadí las reglas responsive para adaptar la distribución a escritorio, tablet y móvil.
 
 ## Cambios respecto al diseño de Figma
 
 Durante la maquetación he realizado algunos ajustes:
 
-- He adaptado los espacios y tamaños para mejorar la visualización en diferentes pantallas.
-- He incorporado capturas de mi diseño de B600 para presentar el resultado del proyecto.
-- En la sección Contacto he sustituido el enlace de correo electrónico por un enlace a LinkedIn para evitar publicar mi dirección personal.
-- He mantenido los proyectos 2 y 3 como espacios provisionales, ya que todavía no están desarrollados.
+- Adopté los espacios y tamaños para mejorar la visualización en diferentes pantallas.
+- Incorporé capturas de mi diseño de B600 para presentar el resultado del proyecto.
+- En la sección Contacto sustituí el enlace de correo electrónico por un enlace a LinkedIn para evitar publicar mi dirección personal.
+- Mantuve los proyectos 2 y 3 como espacios provisionales, ya que todavía no están desarrollados.
 
-He intentado conservar el estilo minimalista y la estructura del diseño original.
+Se intenta conservar el estilo minimalista y la estructura del diseño original.
 
 ## Pendiente para la PEC 5
 
@@ -100,10 +100,4 @@ Las funcionalidades que requieran JavaScript, si se incorporan al proyecto, se d
 Los proyectos 2 y 3 continuarán como contenido provisional hasta que tenga nuevos trabajos para incluir.
 
 
-## Referencia del diseño
-
-Para realizar la PEC 4 he utilizado como referencia
-el diseño que preparé en Figma para la PEC 3.
-
-[Ver mi diseño en Figma](https://www.figma.com/design/XxeU9xeTPRR0IZ3OL61PSO/PEC3--cardamone?node-id=0-1)
 
