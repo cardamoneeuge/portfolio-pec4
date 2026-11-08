@@ -1,0 +1,933 @@
+@use "variables" as v;
+@use "components";
+
+
+// Estilos generales
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: v.$font-primary;
+  background-color: v.$color-primary;
+  color: v.$color-secondary;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Contenedor principal
+.contenedor {
+  width: 90%;
+  max-width: v.$container-max-width;
+  margin: 0 auto;
+}
+
+// Cabecera
+.header {
+  padding: 30px 0;
+  background-color: v.$color-primary;
+
+  .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// Cabecera en móviles
+@media (max-width: 768px) {
+  .header .contenedor {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  span {
+    font-size: 11px;
+    color: v.$color-light-gray;
+  }
+}
+
+// Menú de navegación
+.menu {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+
+// Menú en móviles
+@media (max-width: 768px) {
+  .menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+// Portada
+
+.portada {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    font-size: clamp(48px, 7vw, 100px);
+    font-weight: 600;
+    letter-spacing: -0.06em;
+    line-height: 1;
+
+    span {
+      color: v.$color-accent;
+    }
+  }
+}
+
+.portada-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: 60px;
+
+  p {
+    max-width: 400px;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+
+
+// Sección Sobre mí
+.sobre-mi {
+  background-color: v.$color-secondary;
+  color: v.$color-primary;
+  padding: 100px 0;
+}
+
+.sobre-mi-contenido {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  margin-top: 60px;
+}
+
+/* Imagen de la sección Sobre mí */
+.sobre-mi-imagen {
+  min-width: 0;
+  min-height: 0;
+  background: transparent;
+  position: relative;
+}
+
+.sobre-mi-imagen img {
+  display: block;
+  width: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+.sobre-mi-texto h2 {
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+// Sección Proyectos
+.proyectos {
+  background-color: v.$color-primary;
+  color: v.$color-secondary;
+  padding: 100px 0;
+}
+
+
+
+.proyecto-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+// Sección Proceso
+.proceso {
+  background-color: v.$color-secondary;
+  color: v.$color-primary;
+  padding: 100px 0;
+}
+
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 80px;
+}
+
+/* Figuras geométricas de Habilidades */
+.figura {
+  position: relative;
+  width: 140px;
+  min-height: 150px;
+  margin-top: 20px;
+}
+
+.figura .circulo {
+  position: absolute;
+  width: 120px;
+  min-height: 120px;
+  border: 1px solid #777;
+  border-radius: 50%;
+  top: 15px;
+  left: 10px;
+}
+
+.figura .rombo {
+  position: absolute;
+  width: 85px;
+  min-height: 85px;
+  border: 1px solid #777;
+  transform: rotate(45deg);
+  top: 32px;
+  left: 27px;
+}
+
+.figura .linea-vertical {
+  position: absolute;
+  width: 1px;
+  min-height: 150px;
+  background-color: #777;
+  top: 0;
+  left: 70px;
+}
+
+/* Figura 02 — Interpretar */
+.figura-interpretar .cuadrado-inclinado {
+  position: absolute;
+  width: 90px;
+  min-height: 90px;
+  border: 1px solid #777;
+  transform: rotate(-15deg);
+  top: 30px;
+  left: 25px;
+}
+
+.figura-interpretar .linea-diagonal {
+  position: absolute;
+  width: 1px;
+  min-height: 150px;
+  background-color: #777;
+  top: 0;
+  left: 70px;
+  transform: rotate(30deg);
+}
+
+/* Figura 03 — Dar forma */
+.figura-dar-forma .rombo-exterior {
+  position: absolute;
+  width: 110px;
+  min-height: 110px;
+  border: 1px solid #777;
+  transform: rotate(45deg);
+  top: 20px;
+  left: 15px;
+}
+
+.figura-dar-forma .rombo-interior {
+  position: absolute;
+  width: 78px;
+  min-height: 78px;
+  border: 1px solid #777;
+  transform: rotate(45deg);
+  top: 36px;
+  left: 31px;
+}
+
+/* Figura 04 — Comprobar */
+.figura-comprobar .linea-horizontal {
+  position: absolute;
+  width: 140px;
+  min-height: 1px;
+  background-color: #777;
+  top: 75px;
+  left: 0;
+}
+
+// Enlace de Sobre mí
+.enlace-recorrido {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: v.$color-primary;
+  text-decoration: none;
+  border-bottom: 1px solid v.$color-primary;
+  padding-bottom: 8px;
+}
+
+// Sección Contacto
+.contacto {
+  background-color: v.$color-light-gray;
+  color: v.$color-primary;
+  padding: 100px 0;
+}
+
+// Contacto en móviles
+@media (max-width: 768px) {
+  .contacto {
+    padding: 60px 0;
+  }
+}
+
+.contacto-contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.contacto-enlaces {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contacto-enlaces a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.icono-contacto {
+  width: 18px;
+  min-height: 18px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+
+// Pie de página
+.footer {
+  background-color: v.$color-primary;
+  color: v.$color-secondary;
+  padding: 40px 0;
+}
+
+
+
+
+/* Encabezado de la sección Habilidades */
+.proceso-encabezado {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 70px;
+}
+
+.proceso-encabezado .introduccion {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .proceso-encabezado {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+// Título de la sección Proceso
+
+.proceso h2 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 30px;
+}
+
+// Descripción de la sección
+.proceso .introduccion {
+  max-width: 400px;
+  color: v.$color-dark-gray;
+  line-height: 1.6;
+}
+
+// Cada paso del proceso
+.paso {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  span {
+    font-size: 12px;
+    color: v.$color-dark-gray;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: v.$color-dark-gray;
+    margin: 0;
+  }
+}
+
+
+
+// Sección Contacto
+.contacto h2 {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+// Título de contacto en móviles
+@media (max-width: 768px) {
+  .contacto h2 {
+    font-size: 42px;
+  }
+}
+
+.contacto-enlaces {
+  width: 350px;
+}
+
+.contacto-enlaces a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 25px 0;
+  border-top: 1px solid v.$color-accent;
+  font-size: 14px;
+}
+
+.contacto-enlaces a:last-child {
+  border-bottom: 1px solid v.$color-accent;
+}
+
+.contacto-enlaces img {
+  width: 18px;
+}
+
+// Footer
+.footer .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 12px;
+  color: v.$color-light-gray;
+}
+
+
+
+// Título de Mis proyectos
+.proyectos h2 {
+  font-size: 64px;
+  font-weight: 500;
+  margin: 30px 0;
+}
+
+// Texto de presentación
+.proyectos .introduccion {
+  max-width: 500px;
+  color: v.$color-light-gray;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+
+
+
+// Títulos de cada proyecto
+.proyecto-info h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+// Descripción de los proyectos
+.proyecto-info p {
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+// Enlace para ver el proyecto
+.proyecto-info .enlace {
+  display: inline-block;
+  border-bottom: 1px solid v.$color-light-gray;
+  padding-bottom: 8px;
+}
+
+
+// Título y descripción de Mis proyectos
+.encabezado-proyectos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.encabezado-proyectos h2 {
+  margin: 0;
+}
+
+.encabezado-proyectos .introduccion {
+  max-width: 400px;
+  margin: 0;
+}
+
+
+
+// Página Sobre mí
+.pagina-sobre-mi {
+  background-color: v.$color-secondary;
+  color: v.$color-primary;
+}
+
+// Cabecera con fondo claro
+.pagina-sobre-mi .header {
+  background-color: v.$color-secondary;
+}
+
+// Presentación personal
+.presentacion {
+  padding: 100px 0;
+}
+
+.presentacion-contenido {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 70px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.presentacion-texto h1 {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin-bottom: 30px;
+}
+
+.presentacion-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: v.$color-dark-gray;
+  margin-bottom: 20px;
+}
+
+// Espacio para la imagen
+.imagen-sobre-mi {
+  min-width: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+
+.imagen-sobre-mi p {
+  font-size: 12px;
+  color: v.$color-dark-gray;
+}
+
+
+
+// Formación
+.formacion {
+  padding: 60px 0;
+}
+
+// Distribución de Formación
+.formacion .contenedor {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 40px;
+}
+
+// Formación en móviles
+@media (max-width: 768px) {
+  .formacion .contenedor {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Lista de estudios
+.lista-formacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.formacion-item {
+  position: relative;
+  border-top: 1px solid v.$color-light-gray;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.formacion-item::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: -18px;
+  width: 7px;
+  min-height: 7px;
+  background-color: #111;
+  border-radius: 50%;
+}
+
+.formacion-item h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.formacion-item p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.formacion-item span {
+  font-size: 14px;
+  color: v.$color-dark-gray;
+}
+
+
+
+// Sección Conocimientos
+.conocimientos {
+  padding: 80px 0 120px;
+}
+
+// Distribución de Conocimientos
+.conocimientos .contenedor {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 40px;
+}
+
+// Conocimientos en móviles
+@media (max-width: 768px) {
+  .conocimientos .contenedor {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lista-conocimientos {
+  margin-top: 60px;
+}
+
+// Cada fila de conocimientos
+.conocimiento-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 1.5fr;
+  gap: 30px;
+  align-items: start;
+  padding: 30px 0;
+}
+
+.conocimiento-item span {
+  font-size: 14px;
+  color: v.$color-dark-gray;
+}
+
+.conocimiento-item h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.conocimiento-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: v.$color-dark-gray;
+  margin: 0;
+}
+
+
+// Enlace a proyectos desde Sobre mí
+.ver-trabajos {
+  padding: 50px 0 90px;
+}
+
+.ver-trabajos .contenedor {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagina-sobre-mi .ver-trabajos .boton {
+  background-color: v.$color-primary;
+  color: v.$color-secondary;
+}
+
+
+
+// Página de detalle de proyectos
+.pagina-detalle {
+  background-color: v.$color-secondary;
+  color: v.$color-primary;
+}
+
+// Cabecera con fondo claro
+.pagina-detalle .header {
+  background-color: v.$color-secondary;
+}
+
+// Presentación de B600
+.detalle-portada {
+  padding: 100px 0 60px;
+}
+
+// Título a la izquierda y descripción a la derecha
+.detalle-encabezado {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin: 50px 0;
+}
+
+.detalle-encabezado h1 {
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.detalle-encabezado p {
+  max-width: 350px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: v.$color-dark-gray;
+}
+
+// Datos generales del proyecto
+.detalle-datos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  border-top: 1px solid v.$color-light-gray;
+  padding-top: 25px;
+}
+
+.detalle-datos h2 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.detalle-datos p {
+  font-size: 14px;
+  color: v.$color-dark-gray;
+}
+
+
+
+// Secciones del detalle del proyecto
+.detalle-seccion {
+  padding: 80px 0;
+}
+
+// Objetivo y resultado
+.detalle-contenido {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+
+.detalle-contenido h2 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  margin-bottom: 25px;
+}
+
+.detalle-contenido p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: v.$color-dark-gray;
+}
+
+// Proceso del proyecto
+.detalle-pasos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.detalle-paso {
+  padding-top: 20px;
+  border-top: 1px solid v.$color-light-gray;
+}
+
+.detalle-paso span {
+  font-size: 14px;
+  color: v.$color-dark-gray;
+}
+
+.detalle-paso h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 25px 0;
+}
+
+.detalle-paso p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: v.$color-dark-gray;
+}
+
+
+
+// Navegación entre proyectos
+.siguiente-proyecto {
+  padding: 60px 0;
+  background-color: v.$color-primary;
+  color: v.$color-secondary;
+}
+
+.siguiente-proyecto .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.siguiente-enlace span {
+  font-size: 12px;
+  color: v.$color-light-gray;
+}
+
+.siguiente-enlace h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 15px 0 0;
+}
+
+
+// Adaptación para móviles
+@media (max-width: 768px) {
+
+
+
+
+  .portada-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  // Secciones con dos columnas
+  .sobre-mi-contenido,
+  .presentacion-contenido,
+  .detalle-encabezado,
+  .detalle-contenido {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  // Proyectos
+  .encabezado-proyectos,
+  .proyecto-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  // Formación y proceso
+  .lista-formacion,
+  .pasos,
+  .detalle-datos,
+  .detalle-pasos {
+    grid-template-columns: 1fr;
+  }
+
+  // Conocimientos
+  .conocimiento-item {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  // Contacto y footer
+  .contacto-contenido,
+  .footer .contenedor,
+  .siguiente-proyecto .contenedor {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contacto-enlaces {
+    width: 100%;
+  }
+
+  // Imagen de B600 en móviles
+  .detalle-imagen img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  // Separación de la imagen pendiente en móviles
+  .detalle-imagen .imagen-pendiente {
+    margin-bottom: 30px;
+  }
+}
+
+// Separación inferior de la imagen de B600
+.detalle-imagen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+// Espaciado de las secciones de B600 en tablet y móvil
+@media (max-width: 768px) {
+  .pagina-detalle .detalle-seccion {
+    padding: 50px 0;
+  }
+}

@@ -1,0 +1,51 @@
+
+// Colores y tipografía del portfolio
+@use "variables" as v;
+
+
+
+// Botón principal
+.boton {
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: v.$color-secondary;
+  color: v.$color-primary;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.tarjeta-proyecto {
+  margin-top: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid v.$color-dark-gray;
+}
+
+// Imágenes de los proyectos
+
+.tarjeta-proyecto img {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  background-color: v.$color-dark-gray;
+}
+
+// Imagen de B600 adaptada a móvil
+@media (max-width: 768px) {
+  .tarjeta-proyecto img.imagen-b600 {
+    min-height: 0;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+// Espacio para proyectos sin imagen
+.imagen-pendiente {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: v.$color-dark-gray;
+}
+
