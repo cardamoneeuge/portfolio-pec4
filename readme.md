@@ -4,7 +4,7 @@
 
 Este es mi portfolio personal, realizado para la PEC 4 del Máster en UX/UI y Diseño Web de CEI.
 
-He utilizado como referencia el diseño que preparé en Figma para la PEC 3. El objetivo ha sido trasladar ese diseño a HTML y Sass, manteniendo su estructura, colores y estilo visual.
+Utilicé como referencia el diseño que preparé en Figma para la PEC 3. El objetivo ha sido trasladar ese diseño a HTML y Sass, manteniendo su estructura, colores y estilo visual.
 
 ## Herramientas utilizadas
 
@@ -37,13 +37,13 @@ Los proyectos 2 y 3 mantienen una estructura visual similar a B600, pero su cont
 
 ## Componentes reutilizables
 
-He creado estilos que se reutilizan en diferentes partes de la web:
+Fuí creando estilos que se reutilizan en diferentes partes de la web:
 
 - **Botones:** para acceder a las secciones y páginas.
 - **Tarjetas de proyectos:** para presentar B600 y los proyectos pendientes.
 - **Contenedor principal:** para mantener márgenes y alineaciones consistentes.
 
-También he utilizado Flexbox y Grid para distribuir los elementos.
+También utilicé  Flexbox y Grid para distribuir los elementos.
 
 
 ## Navegación de la web
@@ -76,13 +76,13 @@ La navegación permite acceder a las distintas páginas y regresar a la sección
 
 Se utilizó tipografía Inter y una paleta de negro, blanco y gris, siguiendo el diseño de mi PEC 3.
 
-Para organizar los estilos he utilizado Sass, separando las variables y los componentes reutilizables de los estilos generales.
+Para organizar los estilos utilicé Sass, separando las variables y los componentes reutilizables de los estilos generales.
 
 También añadí las reglas responsive para adaptar la distribución a escritorio, tablet y móvil.
 
 ## Cambios respecto al diseño de Figma
 
-Durante la maquetación he realizado algunos ajustes:
+Durante la maquetación realicé algunos ajustes:
 
 - Adopté los espacios y tamaños para mejorar la visualización en diferentes pantallas.
 - Incorporé capturas de mi diseño de B600 para presentar el resultado del proyecto.
@@ -93,7 +93,7 @@ Se intenta conservar el estilo minimalista y la estructura del diseño original.
 
 ## Pendiente para la PEC 5
 
-En esta PEC he trabajado principalmente la estructura y la maquetación visual.
+En esta PEC trabajé principalmente la estructura y la maquetación visual.
 
 Las funcionalidades que requieran JavaScript, si se incorporan al proyecto, se desarrollarán en la PEC 5.
 
